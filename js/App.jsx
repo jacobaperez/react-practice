@@ -1,19 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
-// import "../public/style.css";
-import Landing from './Landing';
-import Search from './Search';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Landing from "./Landing";
+import Search from "./Search";
 
-const App = () => {
-  return (
-    <BrowserRouter>
-      <div className="app">
+const FourOhFour = () => <h1>404</h1>;
+
+const App = () => (
+  <BrowserRouter>
+    <div className="app">
+      <Switch>
         <Route exact path="/" component={Landing} />
         <Route path="/search" component={Search} />
-      </div>
-    </BrowserRouter>
-  );
-};
+        <Route component={FourOhFour} />
+      </Switch>
+    </div>
+  </BrowserRouter>
+);
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById("app"));
