@@ -5,7 +5,9 @@ import ShowCard from "./ShowCard";
 
 const Search = props => (
   <div className="search">
-    {preload.shows.map(show => <ShowCard show={show} key={show.imdbID} />)}
+    <div>
+      {preload.shows.map(show => <ShowCard show={show} key={show.imdbID} />)}
+    </div>
   </div>
 );
 
