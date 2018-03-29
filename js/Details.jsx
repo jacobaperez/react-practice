@@ -1,6 +1,6 @@
 // @flow
-import React from "react";
-import Header from "./Header";
+import React from 'react';
+import Header from './Header';
 
 const Details = (props: { show: Show }) => {
   const { title, description, year, poster, trailer } = props.show;
@@ -10,10 +10,7 @@ const Details = (props: { show: Show }) => {
       <section>
         <h1>{title}</h1>
         <h2>({year})</h2>
-        <img
-          src={`/public/img/posters/${poster}`}
-          alt={`Poster for ${poster}`}
-        />
+        <img src={`/public/img/posters/${poster}`} alt={`Poster for ${poster}`} />
       </section>
       <p>{description}</p>
       <div>
