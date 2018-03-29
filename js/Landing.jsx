@@ -1,8 +1,9 @@
+// @flow
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-const Landing = props => {
+const Landing = () => {
   return (
     <div className="landing">
       <h1>Mini Netflix</h1>

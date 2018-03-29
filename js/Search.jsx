@@ -2,12 +2,16 @@
 
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import preload from "../data.json";
 import ShowCard from "./ShowCard";
+import Header from "./Header";
 
 class Search extends Component {
   state = {
     searchTerm: ""
+  };
+  // For typing
+  props: {
+    shows: Array<Show>
   };
 
   handleSearchTermChange = (
@@ -19,18 +23,13 @@ class Search extends Component {
   render() {
     return (
       <div className="search">
-        <header>
-          <h1>netflicks</h1>
-          <input
-            onChange={this.handleSearchTermChange}
-            value={this.state.searchTerm}
-            type="text"
-            placeholder="search"
-          />
-        </header>
-
+        <Header
+          showSearch
+          handleSearchTermChange={this.handleSearchTermChange}
+          searchTerm={this.state.searchTerm}
+        />
         <div>
-          {preload.shows
+          {this.props.shows
             .filter(
               show =>
                 `${show.title} ${show.description}`
