@@ -6,6 +6,8 @@
   "author": "Jake Perez <jacobanthony.perez@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "test": "jest",
+    "test:update": "jest -u",
     "dev": "webpack-dev-server",
     "api": "node ratingsAPI.js",
     "build": "webpack",
@@ -37,6 +39,9 @@
     "webpack": "2.6.1",
     "webpack-dev-middleware": "1.10.2",
     "webpack-hot-middleware": "2.18.0"
+  },
+  "jest": {
+    "snapshotSerializers": ["jest-serializer-enzyme"]
   },
   "devDependencies": {
     "babel-core": "6.24.1",
