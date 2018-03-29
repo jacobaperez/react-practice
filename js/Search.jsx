@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import preload from "../data.json";
@@ -8,7 +10,9 @@ class Search extends Component {
     searchTerm: ""
   };
 
-  handleSearchTermChange = e => {
+  handleSearchTermChange = (
+    e: SyntheticKeyboardEvent & { target: HTMLInputElement }
+  ) => {
     this.setState({ searchTerm: e.target.value });
   };
 
@@ -33,7 +37,7 @@ class Search extends Component {
                   .toUpperCase()
                   .indexOf(this.state.searchTerm.toUpperCase()) >= 0
             )
-            .map(show => <ShowCard show={show} key={show.imdbID} />)}
+            .map(show => <ShowCard {...show} key={show.imdbID} />)}
         </div>
       </div>
     );
