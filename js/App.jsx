@@ -1,9 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter, Route } from "react-router-dom";
-import "../public/style.css";
-import Landing from "./Landing";
-import Search from "./Search";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
+// import "../public/style.css";
+import Landing from './Landing';
+import Search from './Search';
 
 const App = () => {
   return (
@@ -16,4 +16,4 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById('app'));

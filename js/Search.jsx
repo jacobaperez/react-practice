@@ -1,6 +1,6 @@
-import React from "react";
-import data from "../data.json";
-import ShowCard from "./ShowCard";
+import React from 'react';
+import data from '../data.json';
+import ShowCard from './ShowCard';
 
 const Search = props => {
   return (

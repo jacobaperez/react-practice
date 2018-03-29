@@ -1,9 +1,8 @@
-import React from "react";
-import { string } from "prop-types";
+import React from 'react';
+import { string } from 'prop-types';
 import styled from 'styled-components';
 
-const Wrapper = styled.div
-`
+const Wrapper = styled.div`
   width: 32%;
   border: 2px solid #333;
   border-radius: 4px;
@@ -12,8 +11,7 @@ const Wrapper = styled.div
   overflow: hidden;
 `;
 
-const Image = styled.img
-`
+const Image = styled.img`
   width: 46%;
   float: left;
   margin-right: 10px;
@@ -22,10 +20,7 @@ const Image = styled.img
 const ShowCard = props => {
   return (
     <Wrapper>
-      <Image
-        alt={`${props.title} Show Poster`}
-        src={`/public/img/posters/${props.poster}`}
-      />
+      <Image alt={`${props.title} Show Poster`} src={`/public/img/posters/${props.poster}`} />
       <div>
         <h3>{props.title}</h3>
         <h4>({props.year})</h4>
