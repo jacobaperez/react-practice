@@ -1,10 +1,9 @@
 import React from "react";
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import ReactDOM from "react-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import "../public/style.css";
-import Landing from './Landing';
-import Search from './Search';
-
+import Landing from "./Landing";
+import Search from "./Search";
 
 const App = () => {
   return (
@@ -14,8 +13,7 @@ const App = () => {
         <Route path="/search" component={Search} />
       </div>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById("app"));
