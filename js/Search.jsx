@@ -16,7 +16,7 @@ const Search = (props: { searchTerm: string, shows: Array<Show> }) => {
             show =>
               `${show.title} ${show.description}`
                 .toUpperCase()
-                .indexOf(this.state.searchTerm.toUpperCase()) >= 0
+                .indexOf(props.searchTerm.toUpperCase()) >= 0
           )
           .map(show => <ShowCard {...show} key={show.imdbID} />)}
       </div>
